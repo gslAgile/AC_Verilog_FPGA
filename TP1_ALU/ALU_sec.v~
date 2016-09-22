@@ -71,7 +71,7 @@ module ALU_sec
 						(dato_Op==6'b100100) ? dato_A&dato_B:// AND
 						(dato_Op==6'b100101) ? dato_A|dato_B://OR	
 						(dato_Op==6'b100110) ? dato_A^dato_B:// XOR
-						(dato_Op==6'b000011) ? {31'hffff,dato_A}>>> 1://{dato_A[7],dato_A[7:1]}:// SRA
+						(dato_Op==6'b000011) ? {32'hffff,dato_A}>>> 1://{dato_A[7],dato_A[7:1]}:// SRA
 						(dato_Op==6'b000010) ? {0,dato_A} >> dato_B:// SRL
 						(dato_Op==6'b100111) ? ~(dato_A|dato_B): 0;// NOR
 	
