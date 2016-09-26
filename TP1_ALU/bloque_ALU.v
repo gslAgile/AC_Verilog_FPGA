@@ -51,7 +51,7 @@ output wire signed [msb:0] buf_R; // puede ser reg dato_R para forma 2.
 							(buf_Op==`XOR) ? buf_A^buf_B:// XOR
 							(buf_Op==`SRA & buf_A[msb]== 1) ? buf_A >>> (buf_B&8'b00011111): // SRA -> Se Se realiza ANDing para no superar 31 avances
 							(buf_Op==`SRA & buf_A[msb]== 0) ? buf_A >> (buf_B&8'b00011111):
-							(buf_Op==`SRL) ? {0,buf_A} >> buf_B:// SRL
+							(buf_Op==`SRL) ? buf_A >> buf_B:// SRL
 							(buf_Op==`NOR) ? ~(buf_A|buf_B): 0;// NOR
 
 // Circuito puramente combinacional forma 2:
