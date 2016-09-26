@@ -36,17 +36,17 @@ input [msb:0]buf_in; // buffer de entrada para capturar datos de operandos y cod
 output wire [msb:0] dato_R; // registro de salida asociado a ALU
 
 // Variables internas
-reg signed[msb:0] dato_A, dato_B; // registros que almacenaran los operandos
+reg [msb:0] dato_A, dato_B; // registros que almacenaran los operandos
 reg [5:0] dato_Op; // registro que almacena el codigo de operacion
 
 // Captura de datos a traves de buf_in
 always @(posedge clk)
 begin
-	if(p_abc == 3'b100)
-			dato_A = buf_in;
-	else if (p_abc == 3'b010)
+	if(p_abc[0])
+		dato_A = buf_in;
+	else if (p_abc[1])
 		dato_B = buf_in;
-	else if(p_abc == 3'b001)
+	else if(p_abc[2])
 		dato_Op = buf_in[5:0];
 end
 
