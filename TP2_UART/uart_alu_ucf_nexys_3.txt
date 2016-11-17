@@ -1,0 +1,23 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "clk" LOC = V10;
+NET "reset" LOC = B8;
+
+# rx y tx
+NET "rx" LOC = N17; # N18
+NET "tx" LOC = N18; # N17
+
+# Flags
+NET "tx_full" LOC = T17;
+NET "rx_empty" LOC = U18;
+
+# LEDs
+NET "result_alu<7>" LOC = T11;
+NET "result_alu<6>" LOC = R11;
+NET "result_alu<5>" LOC = N11;
+NET "result_alu<4>" LOC = M11;
+NET "result_alu<3>" LOC = V15;
+NET "result_alu<2>" LOC = U15;
+NET "result_alu<1>" LOC = V16;
+NET "result_alu<0>" LOC = U16;
