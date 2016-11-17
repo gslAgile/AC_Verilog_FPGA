@@ -1,0 +1,22 @@
+# Pulsadores
+NET "clk" LOC = "B8";
+NET "reset" LOC = "A7";
+#NET "wr" LOC = "M4";
+
+# rx & tx
+NET "rx" LOC = "B5";
+NET "tx" LOC = "J3";
+
+# Flags full empty
+NET "rx_empty" LOC = "L14";
+NET "tx_full" LOC = "N11";
+
+# LED
+NET "result_alu<0>" LOC = "M5";
+NET "result_alu<1>" LOC = "M11";
+NET "result_alu<2>" LOC = "P7";
+NET "result_alu<3>" LOC = "P6";
+NET "result_alu<4>" LOC = "N5";
+NET "result_alu<5>" LOC = "N4";
+NET "result_alu<6>" LOC = "P4";
+NET "result_alu<7>" LOC = "G1";
